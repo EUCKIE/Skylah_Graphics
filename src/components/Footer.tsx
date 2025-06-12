@@ -1,10 +1,7 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-
 export const Footer = () => {
-  return (
-    <footer className="bg-muted py-12 px-4">
+  return <footer className="bg-muted py-12 px-4">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -45,15 +42,16 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">hello@skylahgraphics.com</span>
+                <span className="text-muted-foreground">skylahgraphics@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                <span className="text-muted-foreground">+263 71 330 5700</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">123 Design St, Creative City</span>
+                <span className="text-muted-foreground">Hse 287, Daisyhill Chipinge
+Zimbabwe </span>
               </div>
             </div>
           </div>
@@ -63,6 +61,5 @@ export const Footer = () => {
           <p>&copy; 2024 Skylah Graphics. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
