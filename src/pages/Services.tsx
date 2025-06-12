@@ -11,29 +11,25 @@ const services = [
     icon: Palette,
     title: "Brand Identity Design",
     description: "Complete brand identity packages including logo design, color palettes, typography, and brand guidelines.",
-    features: ["Logo Design", "Color Palette", "Typography", "Brand Guidelines", "Business Cards"],
-    price: "Starting at $899"
+    features: ["Logo Design", "Color Palette", "Typography", "Brand Guidelines", "Business Cards"]
   },
   {
     icon: Monitor,
     title: "Web Design & Development",
     description: "Modern, responsive websites that convert visitors into customers with stunning visual design.",
-    features: ["Responsive Design", "UI/UX Design", "SEO Optimization", "Content Management", "E-commerce"],
-    price: "Starting at $1,299"
+    features: ["Responsive Design", "UI/UX Design", "SEO Optimization", "Content Management", "E-commerce"]
   },
   {
     icon: Printer,
     title: "Print Design",
     description: "Professional print materials including brochures, flyers, posters, and marketing collateral.",
-    features: ["Brochures", "Flyers", "Posters", "Business Cards", "Packaging"],
-    price: "Starting at $299"
+    features: ["Brochures", "Flyers", "Posters", "Business Cards", "Packaging"]
   },
   {
     icon: Smartphone,
     title: "Digital Marketing Design",
     description: "Eye-catching social media graphics, banner ads, and digital marketing materials.",
-    features: ["Social Media Graphics", "Banner Ads", "Email Templates", "Digital Flyers", "Infographics"],
-    price: "Starting at $199"
+    features: ["Social Media Graphics", "Banner Ads", "Email Templates", "Digital Flyers", "Infographics"]
   }
 ];
 
@@ -61,7 +57,6 @@ const Services = () => {
                     </div>
                     <div>
                       <CardTitle className="text-xl">{service.title}</CardTitle>
-                      <div className="text-lg font-semibold text-primary">{service.price}</div>
                     </div>
                   </div>
                   <p className="text-muted-foreground">{service.description}</p>

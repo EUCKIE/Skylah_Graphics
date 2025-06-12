@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -7,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -14,9 +16,8 @@ const Contact = () => {
     subject: "",
     message: ""
   });
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // This would typically integrate with a backend service
@@ -24,20 +25,18 @@ const Contact = () => {
       title: "Message Sent!",
       description: "We'll get back to you within 24 hours."
     });
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: ""
-    });
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
   };
-  return <div className="min-h-screen bg-background">
+
+  return (
+    <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-24 pb-12 px-4">
         <div className="container mx-auto">
@@ -62,13 +61,28 @@ const Contact = () => {
                       <label htmlFor="name" className="block text-sm font-medium mb-2">
                         Name *
                       </label>
-                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Your name" />
+                      <Input 
+                        id="name" 
+                        name="name" 
+                        value={formData.name} 
+                        onChange={handleChange} 
+                        required 
+                        placeholder="Your name" 
+                      />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium mb-2">
                         Email *
                       </label>
-                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="your@email.com" />
+                      <Input 
+                        id="email" 
+                        name="email" 
+                        type="email" 
+                        value={formData.email} 
+                        onChange={handleChange} 
+                        required 
+                        placeholder="your@email.com" 
+                      />
                     </div>
                   </div>
                   
@@ -76,14 +90,29 @@ const Contact = () => {
                     <label htmlFor="subject" className="block text-sm font-medium mb-2">
                       Subject *
                     </label>
-                    <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} required placeholder="What's this about?" />
+                    <Input 
+                      id="subject" 
+                      name="subject" 
+                      value={formData.subject} 
+                      onChange={handleChange} 
+                      required 
+                      placeholder="What's this about?" 
+                    />
                   </div>
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
                       Message *
                     </label>
-                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} placeholder="Tell us about your project..." />
+                    <Textarea 
+                      id="message" 
+                      name="message" 
+                      value={formData.message} 
+                      onChange={handleChange} 
+                      required 
+                      rows={6} 
+                      placeholder="Tell us about your project..." 
+                    />
                   </div>
                   
                   <Button type="submit" size="lg" className="w-full">
@@ -103,8 +132,6 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold">Email</h3>
                         <p className="text-muted-foreground">skylahgraphics@gmail.com</p>
-                        <p className="text-muted-foreground">
-                      </p>
                       </div>
                     </div>
                     
@@ -122,9 +149,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold">Office</h3>
                         <p className="text-muted-foreground">
-                          123 Design Street<br />
-                          Creative City, CC 12345<br />
-                          United States
+                          Hse 287, Daisyhill Chipinge<br />
+                          Zimbabwe
                         </p>
                       </div>
                     </div>
@@ -134,7 +160,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold">Business Hours</h3>
                         <p className="text-muted-foreground">
-                          Monday - Friday: 9:00 AM - 6:00 PM<br />
+                          Monday - Friday: 8:00 AM - 6:00 PM<br />
                           Saturday: 10:00 AM - 4:00 PM<br />
                           Sunday: Closed
                         </p>
@@ -144,17 +170,20 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Map Placeholder */}
+              {/* Google Maps Embed */}
               <Card>
                 <CardContent className="p-0">
-                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
-                      <p className="text-muted-foreground">Interactive Map</p>
-                      <p className="text-sm text-muted-foreground">
-                        Google Maps integration would go here
-                      </p>
-                    </div>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.5!2d32.6594!3d-19.7725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDQ2JzIxLjAiUyAzMsKwMzknMzMuOCJF!5e0!3m2!1sen!2szw!4v1640000000000!5m2!1sen!2szw&q=MJG5%2B4R+Babblespruit"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Skylah Graphics Location"
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -163,6 +192,8 @@ const Contact = () => {
         </div>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Contact;

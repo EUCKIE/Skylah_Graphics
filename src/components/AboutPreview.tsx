@@ -1,8 +1,11 @@
+
 import { Button } from "@/components/ui/button";
-import { Users, Target, Award } from "lucide-react";
+import { Users, Target, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
+
 export const AboutPreview = () => {
-  return <section className="py-16 px-4">
+  return (
+    <section className="py-16 px-4">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -28,9 +31,9 @@ export const AboutPreview = () => {
                 <div className="text-sm text-muted-foreground">Projects</div>
               </div>
               <div className="text-center">
-                <Award className="h-8 w-8 text-primary mx-auto mb-3" />
-                <div className="text-2xl font-bold">3</div>
-                <div className="text-sm text-muted-foreground">Awards</div>
+                <Calendar className="h-8 w-8 text-primary mx-auto mb-3" />
+                <div className="text-2xl font-bold">3+</div>
+                <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
             </div>
 
@@ -45,5 +48,6 @@ export const AboutPreview = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

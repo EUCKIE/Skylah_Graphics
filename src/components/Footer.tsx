@@ -1,7 +1,10 @@
+
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+
 export const Footer = () => {
-  return <footer className="bg-muted py-12 px-4">
+  return (
+    <footer className="bg-muted py-12 px-4">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -10,10 +13,18 @@ export const Footer = () => {
               Creative design solutions that bring your brand to life.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer" />
-              <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer" />
-              <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer" />
-              <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer" />
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              </a>
             </div>
           </div>
 
@@ -50,8 +61,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">Hse 287, Daisyhill Chipinge
-Zimbabwe </span>
+                <span className="text-muted-foreground">Hse 287, Daisyhill Chipinge Zimbabwe</span>
               </div>
             </div>
           </div>
@@ -61,5 +71,6 @@ Zimbabwe </span>
           <p>© 2025 Skylah Graphics. All rights reserved.</p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
