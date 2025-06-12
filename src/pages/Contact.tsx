@@ -175,7 +175,7 @@ const Contact = () => {
                 <CardContent className="p-0">
                   <div className="aspect-video rounded-lg overflow-hidden">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.5!2d32.6594!3d-19.7725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDQ2JzIxLjAiUyAzMsKwMzknMzMuOCJF!5e0!3m2!1sen!2szw!4v1640000000000!5m2!1sen!2szw&q=MJG5%2B4R+Babblespruit"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.7!2d32.609627!3d-20.324439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a7b8e0b0b0b%3A0x0!2zMjDCsDE5JzI4LjAiUyAzMsKwMzYnMzQuNyJF!5e0!3m2!1sen!2szw!4v1640000000000!5m2!1sen!2szw"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}

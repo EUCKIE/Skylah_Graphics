@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -13,17 +12,20 @@ export const Footer = () => {
               Creative design solutions that bring your brand to life.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://facebook.com/SkylahGraphics" target="_blank" rel="noopener noreferrer">
                 <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/skylah-graphics" target="_blank" rel="noopener noreferrer">
                 <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              </a>
+              <a href="https://wa.me/263713305700" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
               </a>
             </div>
           </div>

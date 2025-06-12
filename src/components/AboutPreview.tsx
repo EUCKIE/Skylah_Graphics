@@ -42,9 +42,11 @@ export const AboutPreview = () => {
             </Button>
           </div>
           
-          <div className="grid grid-cols-2 gap-4">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Team member" className="w-full h-48 object-cover rounded-lg" />
-            <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" alt="Design work" className="w-full h-48 object-cover rounded-lg mt-8" />
+          <div className="flex items-center justify-center">
+            <div className="text-center text-muted-foreground">
+              <p className="text-lg">Coming Soon</p>
+              <p className="text-sm">More content will be added here</p>
+            </div>
           </div>
         </div>
       </div>
