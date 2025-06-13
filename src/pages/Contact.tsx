@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,16 +17,39 @@ const Contact = () => {
     subject: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // This would typically integrate with a backend service
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours."
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for your message. We'll get back to you within 24 hours."
+      });
+      
+      // Reset form
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error: any) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error Sending Message",
+        description: "There was a problem sending your message. Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -67,7 +91,8 @@ const Contact = () => {
                         value={formData.name} 
                         onChange={handleChange} 
                         required 
-                        placeholder="Your name" 
+                        placeholder="Your name"
+                        disabled={isSubmitting}
                       />
                     </div>
                     <div>
@@ -81,7 +106,8 @@ const Contact = () => {
                         value={formData.email} 
                         onChange={handleChange} 
                         required 
-                        placeholder="your@email.com" 
+                        placeholder="your@email.com"
+                        disabled={isSubmitting}
                       />
                     </div>
                   </div>
@@ -96,7 +122,8 @@ const Contact = () => {
                       value={formData.subject} 
                       onChange={handleChange} 
                       required 
-                      placeholder="What's this about?" 
+                      placeholder="What's this about?"
+                      disabled={isSubmitting}
                     />
                   </div>
                   
@@ -111,12 +138,13 @@ const Contact = () => {
                       onChange={handleChange} 
                       required 
                       rows={6} 
-                      placeholder="Tell us about your project..." 
+                      placeholder="Tell us about your project..."
+                      disabled={isSubmitting}
                     />
                   </div>
                   
-                  <Button type="submit" size="lg" className="w-full">
-                    Send Message
+                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
