@@ -15,13 +15,10 @@ export const Footer = () => {
               <a href="https://facebook.com/SkylahGraphics" target="_blank" rel="noopener noreferrer">
                 <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-              </a>
-              <a href="https://instagram.com/skylah-graphics" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/skylah_graphics" target="_blank" rel="noopener noreferrer">
                 <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/euclide-mtisi-929123317" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
               </a>
               <a href="https://wa.me/263713305700" target="_blank" rel="noopener noreferrer">

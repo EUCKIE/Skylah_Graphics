@@ -3,21 +3,24 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Target, Award, Heart } from "lucide-react";
 const teamMembers = [{
-  name: "Sarah Johnson",
-  role: "Creative Director",
-  image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-  bio: "With over 8 years in design, Sarah leads our creative vision and ensures every project exceeds expectations."
-}, {
-  name: "Mike Chen",
-  role: "Brand Designer",
-  image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-  bio: "Mike specializes in brand identity and has helped over 50 companies establish their visual presence."
-}, {
-  name: "Emily Rodriguez",
+  name: "Euclide Mtisi",
+  role: "C.E.O & Founder ",
+  image: "/team/euclide.png ",
+  bio: "Euclide Mtisi is the visionary behind Skylah Graphics, a creative powerhouse specializing in graphic design, print media, and web development. With a passion for visual storytelling and a keen eye for detail, Euclide leads a dynamic team dedicated to crafting impactful brand experiences. Under his leadership, Skylah Graphics has grown into a trusted name for innovative design solutions across industries."
+}, 
+{
+  name: "Tinashe Nyagumbo",
+  role: "Markerting and Logistics",
+  image: "/team/Tinashe.jpg ",
+  bio: "Tinashe oversees marketing strategy and logistics at Skylah Graphics, ensuring smooth operations and impactful brand outreach. His coordination skills help bridge creativity with execution."
+},
+ {
+  name: "Open Position",
   role: "Web Designer",
-  image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-  bio: "Emily creates stunning web experiences that combine beautiful design with seamless functionality."
+  image: " https://media.istockphoto.com/id/1267811430/photo/teamwork-join-our-team-message-lightbox.jpg?s=1024x1024&w=is&k=20&c=frhWSDMhBHHHhcVraAaE9AitMS0sp-hVX3nh7W1_awg=",
+  bio: "We’re looking for a talented Web Designer to join Skylah Graphics. If you’re passionate about creating stunning, user-friendly websites that elevate brands, we’d love to hear from you."
 }];
+
 const values = [{
   icon: Heart,
   title: "Passion",
@@ -67,8 +70,8 @@ const About = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" alt="Our workspace" className="w-full h-48 object-cover rounded-lg" />
-              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Design process" className="w-full h-48 object-cover rounded-lg mt-8" />
+              <img src="https://images.unsplash.com/photo-1722159475082-0a2331580de3?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D " alt="Our workspace" className="w-full h-48 object-cover rounded-lg" />
+              <img src="https://images.unsplash.com/photo-1711169709434-78b1be10b5c7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Design process" className="w-full h-48 object-cover rounded-lg mt-8" />
             </div>
           </div>
 

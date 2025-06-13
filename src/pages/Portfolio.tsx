@@ -10,45 +10,45 @@ const categories = ["All", "Branding", "Web Design", "Logo Design", "Print Desig
 const projects = [
   {
     id: 1,
-    title: "TechFlow Brand Identity",
+    title: "Perry's Lubricants Brand Identity",
     category: "Branding",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    description: "Complete brand identity including logo, color palette, and brand guidelines for a technology startup."
+    image : "/projects/BRAND GUIDELINE-02.jpg",
+    description: "A comprehensive brand identity package, including a custom logo, cohesive color palette, and detailed brand guidelines, designed to position Perry’s Lubricants as a leading name in the automotive industry."
   },
   {
     id: 2,
-    title: "EcoLife Website",
+    title: "Euclide Mtisi Website Portfolio",
     category: "Web Design",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    description: "Responsive website design for a sustainable living brand with e-commerce functionality."
+    image: "/projects/Euclide Web.png",
+    description: "A visually engaging and dynamic portfolio website showcasing the work of Euclide Mtisi, featuring interactive elements, seamless navigation, and a responsive design to highlight graphic design, branding, and web development projects."
   },
   {
     id: 3,
-    title: "CloudSync Logo",
+    title: "ZigZag Health Haven Logo",
     category: "Logo Design",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    description: "Modern, minimalist logo design for cloud storage service emphasizing connectivity."
+    image: "/projects/ZIGZAG HH.jpg",
+    description: "A modern, clean, and wellness-inspired logo crafted for ZigZag Health Haven, blending calming colors and organic shapes to reflect the brand’s focus on holistic health and natural healing."
   },
   {
     id: 4,
-    title: "Restaurant Menu Design",
+    title: "Microfinance Flyer Design",
     category: "Print Design",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    description: "Elegant menu design for upscale restaurant with sophisticated typography."
+    image: "/projects/MEC COLATERAL BASED LOANS .jpg",
+    description: "A bold and informative flyer created to promote microfinance services, featuring impactful typography, clear messaging, and an accessible layout aimed at engaging communities and encouraging financial inclusion."
   },
   {
     id: 5,
-    title: "FinanceApp Branding",
+    title: "Recording Studio Branding",
     category: "Branding",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-    description: "Professional branding package for financial technology application."
+    image: "/projects/GUIDELINE MINI.jpg",
+    description: "A full-scale branding project for New Xull Records, delivering a high-impact visual identity with a distinctive logo, bold color scheme, and cohesive brand assets tailored to resonate with modern music creators and audiences."
   },
   {
     id: 6,
-    title: "Portfolio Website",
+    title: "Coming Soon",
     category: "Web Design",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    description: "Creative portfolio website for photographer with dynamic image galleries."
+    image: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: ""
   }
 ];
 
